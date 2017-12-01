@@ -42,18 +42,19 @@
     .alignright {
       float: right;
     }
+    
     table {
       width: 100%;
       box-shadow: shadow(lg);
       margin-top: 3rem;
       margin-bottom: 3rem;
-      max-width: 100%;  
+      max-width: 100%; 
       height: auto;
 
       tbody {
         tr {
           &:nth-child(odd){
-            background: background(light-gray)
+            background: background(light-gray);
           }
 
           td {
