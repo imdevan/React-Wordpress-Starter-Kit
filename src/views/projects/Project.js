@@ -88,11 +88,12 @@ class Project extends React.Component{
         transitionAppearTimeout={1000}
         transitionLeaveTimeout={300}
         transitionEnter={false}>
-        <Grid>
-        <Row className='py-5 my-5'>
+        <div className='py-5'>
+        <Grid className='my-5'>
+        <Row>
           <Col sm={12}>
             <h1
-              className='display-1'
+              className='display-1 mb-5'
               dangerouslySetInnerHTML={renderMarkup(post.title.rendered)}/>
           </Col>
         </Row>
@@ -103,6 +104,7 @@ class Project extends React.Component{
           </Col>
         </Row>
       </Grid>
+      </div>
       <Footer />
     </ReactCSSTransitionGroup>
   )}

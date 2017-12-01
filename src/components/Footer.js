@@ -3,9 +3,9 @@ import footerContent from '../config/footerContent';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
-  return <div className='py-5 mt-5 c-bg-light-gray w-100'>
-    <Grid>
-      <Row>
+  return <div className='c-bg-light-gray w-100'>
+    <Grid className='py-5'>
+      <Row  className='my-5'>
       {footerContent.sections.map((section, i) => (
         <Col sm={12} md={4} key={i} className={`${i < footerContent.sections.length-1 ? 'mb-3 mb-md-0': ''}`}>
           <h3>

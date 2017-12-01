@@ -65,10 +65,10 @@ class Home extends React.Component {
         const card = redirect ? 
           <a href={redirect} target='_blank'
             className='c-link-no-style h-100 w-100'><PostCard post={p} /></a> :
-          <Link to={`/${path}/${p.slug}`}
-            className='c-link-no-style h-100 w-100'>
-            <PostCard post={p} />
-          </Link>;
+            <Link to={`/${path}/${p.slug}`}
+              className='c-link-no-style h-100 w-100'>
+              <PostCard post={p} />
+            </Link>;
 
         return <Col sm={12} md={4} key={i}
           className='mb-5 mb-md-0'>
@@ -80,18 +80,17 @@ class Home extends React.Component {
   render(){
     return(
       <MuiThemeProvider muiTheme={getMuiTheme(defaultTheme)}>
-          <div>
-        <ReactCSSTransitionGroup
-          transitionName='fade-in-from-right'
-          transitionAppear={true}
-          transitionAppearTimeout={1000}
-          transitionLeaveTimeout={300}
-          transitionEnter={false}>
-            {/* <AppBar title='My AppBar' className='mb-5'/> */}
+        <div>
+          <ReactCSSTransitionGroup
+            transitionName='fade-in-from-right'
+            transitionAppear={true}
+            transitionAppearTimeout={1000}
+            transitionLeaveTimeout={300}
+            transitionEnter={false}>
             <div>
-              <Grid>
-                <Row>
-                  <Col sm={12} className='text-center my-5 pt-5 '>
+              <Grid className='my-5 py-5'>
+                <Row className='mb-5'>
+                  <Col sm={12} className='text-center'>
                     <Row className='justify-content-center'>
                       <Col className='col-8 col-md-6'>
                         <Svg src={headerImage}
@@ -103,8 +102,8 @@ class Home extends React.Component {
                     </h1>
                   </Col>
                 </Row>
-                <Row>
-                  <Col sm={12} className='my-5'>
+                <Row className='mb-5'>
+                  <Col sm={12}>
                     <p>
                       <Link to='about'>A design, code, and consulting
                       studio</Link> that specializes in
@@ -117,11 +116,19 @@ class Home extends React.Component {
                     </p>
                   </Col>
                 </Row>
+                <Row >
+                  <Col sm={12} className='text-center'>
+                    <a className="typeform-share c-cta"
+                      href="https://bisonstudio.typeform.com/to/Rq8irU"
+                      data-mode="popup"
+                      target="_blank">Request a Quote</a>
+                  </Col>
+                </Row>
               </Grid>
-              <div className='w-100 c-bg-light-gray py-5 my-5'>
-                <Grid>
-                  <Row className='py-5'>
-                      <Col sm={12} className='my-5'>
+              <div className='w-100 c-bg-light-gray'>
+                <Grid className='py-5'>
+                  <Row className='my-5 py-5'>
+                    <Col sm={12} className='py-5'>
                       <h2 className='mb-5'>
                         Projects 2017 to Now
                       </h2>
@@ -130,25 +137,29 @@ class Home extends React.Component {
                   </Row>
                 </Grid>
               </div>
-            <Grid>
-              <Row className='py-5'>
-                  <Col sm={12} className='my-5'>
-                    <h2 className='mb-5'>
-                      What We're Up To
-                    </h2>
-                    {this.renderFeaturedArticles(211)}
-                  </Col>
-                </Row>
-                  <Row className='py-5'>
-                      <Col sm={12} className='my-5'>
-                    <h2 className='mb-5'>
-                      Bison Studio in The Community
-                    </h2>
-                    {this.renderFeaturedArticles(212)}
-                  </Col>
-                </Row>
+                <Grid className='py-5'>
+                <Row className='my-5 py-5'>
+                  <Col sm={12} className='py-5'>
+                      <h2 className='mb-5'>
+                        What We're Up To
+                      </h2>
+                      {this.renderFeaturedArticles(211)}
+                    </Col>
+                  </Row>
                 </Grid>
-                <div className='w-100 c-bg-light-gray py-5 my-5'>
+                <div className='w-100 c-bg-light-gray'>
+                  <Grid className='py-5'>
+                    <Row className='my-5 py-5'>
+                      <Col sm={12} className='py-5'>
+                      <h2 className='mb-5'>
+                        Bison Studio in The Community
+                      </h2>
+                      {this.renderFeaturedArticles(212)}
+                    </Col>
+                  </Row>
+                </Grid>
+              </div>
+                {false && <div className='w-100 c-bg-light-gray py-5 my-5'>
                   <Grid>
                     <Row className='py-5'>
                         <Col sm={12} className='my-5'>
@@ -175,16 +186,18 @@ class Home extends React.Component {
                     </Col>
                   </Row>
                   </Grid>
-                </div>
+                </div>}
                 <Grid>
                   <Row className='py-5'>
                       <Col sm={12} className='my-5 text-center'>
-                    <h2>
+                      <div className='py-5'>
+                    <h2 className='my-0'>
                       Cheers,
                     </h2>
-                    <h2>
+                    <h2 className='my-0'>
                       👋
                     </h2>
+                    </div>
                   </Col>
                 </Row>
               </Grid>
