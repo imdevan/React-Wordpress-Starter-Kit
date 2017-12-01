@@ -1,6 +1,7 @@
 $backgrounds: (
   light-gray: $light-gray,
-  white: $white
+  white: $white,
+  fff: $white
 );
 
 .c-bg {
@@ -9,4 +10,8 @@ $backgrounds: (
       background: $bg-val;
     }
   }
+}
+
+@function background($background: white) {
+  @return map-get($backgrounds, $background);
 }
